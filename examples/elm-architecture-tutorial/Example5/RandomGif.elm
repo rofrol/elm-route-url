@@ -5,7 +5,6 @@ import Html.Attributes exposing (style)
 import Html.Events exposing (onClick)
 import Http
 import Json.Decode as Json
-import Task
 import RouteHash exposing (HashUpdate)
 import RouteUrl.Builder exposing (Builder, builder, path, replacePath)
 
@@ -38,7 +37,7 @@ initial request we issue here.
 -}
 init : ( Model, Cmd Action )
 init =
-    ( Model "funny cats" "assets/waiting.gif" Use
+    ( Model "funny cats" "/assets/waiting.gif" Use
     , getRandomGif "funny cats"
     )
 
